@@ -1,24 +1,56 @@
-# README
+# アプリ名
+okurimono
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 概要
+お年玉や、お祝い事、誕生日などで頂いたり誰かに贈り物をした際に記録を付けることができます。
+贈ったものを振り返ったり、また違う形で誰かにプレゼントを贈る際のヒントにもなります。
+同じものをプレゼントする失敗も回避できます。
+# 本番環境
 
-Things you may want to cover:
+# 制作背景
+私は兄弟が多く甥と姪、親戚含め十数人のお年玉を毎年準備していたのですが、
+毎年どの子にいくらお年玉をあげたのか忘れてしまい金額の調整に困っていました。
+そこでお本件のようなアプリがあれば気軽に楽しく記録できると考えました。
+また、お年玉に限らずお祝い事やプレゼントなど使用用途を幅広く使えることも魅力だと感じております。
+# DEMO
 
-* Ruby version
+# 工夫したポイント
 
-* System dependencies
+# 開発環境
+## バックエンド
+Ruby on Rails
+## フロントエンド
+HTML CSS
+## データベース
+## テスト
+RSpec
+## エディタ
+VSCode
 
-* Configuration
+# 課題、今後の実装機能
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# DB設計
+## usersテーブル
+|Colum              |Type   |Options    |
+|-------------------|-------|-----------|
+|nickname           |string |null:false |
+|email              |string |null:false |
+|encrypted_password |string |null:false |
+|name               |string |null:false |
+|birth_data         |date   |null:false |
+### Association
+has_many :contents
+## contentsテーブル
+|Colum       |Type       |Options                     |
+|------------|-----------|----------------------------|
+|year        |integer    |null:false                  |
+|month       |integer    |null:false                  |
+|day         |integer    |null:false                  |
+|name        |string     |null:false                  |
+|title       |string     |null:false                  |
+|money       |integer    |null:false                  |
+|text        |string     |null:false                  |
+|category_id |integer    |null:false                  |
+|user        |references |null:false,foreign_key:true |
+### Association
+belongs_to :user 
