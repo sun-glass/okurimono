@@ -1,2 +1,14 @@
-<h1>Contents#index</h1>
-<p>Find me in app/views/contents/index.html.erb</p>
+<%= render "shared/header" %>
+
+<div class="wrapper">
+  <h1>これは見出しです</h1>
+  <p>1つ目の段落です</p>
+  <p>2つ目の段落です</p>
+  <p>
+    3つ目の段落です。<b>この部分は太字になります。</b>
+  </p>
+  <a href="https://www.google.com/">クリックすると、Googleへ移動します。</a>
+  <p>Find me in app/views/contents/index.html.erb</p>
+</div>
+
+<%= render "shared/footer" %>
