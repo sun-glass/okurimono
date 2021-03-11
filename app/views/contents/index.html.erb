@@ -1,17 +1,20 @@
 <%= render "shared/header" %>
 
-<div class="main">
+<%# 投稿一覧 %>
+<div class='main'>
 
-<%# 記録一覧 %>
- <div class='contents-lists'>
-  <p>1つ目の段落です</p>
-  <p>2つ目の段落です</p>
-  <p>
-    3つ目の段落です。<b>この部分は太字になります。</b>
-  </p>
-  <a href="https://www.google.com/">クリックすると、Googleへ移動します。</a>
+  <div class='contents-row'>
+    <ul class="content-lists">
+      <img src="https://www.shoshinsha-design.com/wp-content/uploads/2020/05/noimage-760x460.png" class='content-img'>
+      <h1>タイトル/親戚からお年玉</h1>
+      <h2>日付/2021/3/11</h2>
+      <p>TEXT/去年より多く貰って嬉しかった</p>
+      <p>金額/8000円</p>
+      <p>カテゴリー/親戚</p>
+    </ul>
   </div>
-<%# /記録一覧 %>
+
 </div>
+<%# /投稿一覧 %>
 
 <%= render "shared/footer" %>
