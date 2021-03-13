@@ -3,3 +3,10 @@
   height: 100px;
   width: 100vw;
 }
+
+.hed-logo {
+  font-size: 60px;
+  color: mediumturquoise;
+  font-family: arial black;
+  margin-left: 20px;
+}
