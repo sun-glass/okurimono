@@ -6,7 +6,9 @@
   <ul class="nav-lists">
     <li class='user-name'>user-name</li>
     <li class='new-content'>新規作成</li>
-    <li class='logaut-btn'>ログアウト</li>
+    <li class='logaut-btn'>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    </li>
   </ul>
 </div>
 </header>
