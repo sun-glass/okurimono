@@ -1,0 +1,21 @@
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login-color-btn {
+  width: 100%;
+  background: mediumturquoise;
+  cursor: pointer;
+}
+
+.signup-btn {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+}
