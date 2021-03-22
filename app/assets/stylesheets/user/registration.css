@@ -1,0 +1,14 @@
+.registration-main {
+  width: 100%;
+  min-width: 800px;
+  height: calc(100vh - 100px - 100px);
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+}
+
+.form-wrap {
+  width: 50%;
+  background-color: whitesmoke;
+  padding-bottom: 40px;
+}
