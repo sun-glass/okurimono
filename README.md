@@ -20,10 +20,12 @@ okurimono
 
 # 開発環境
 ## バックエンド
-Ruby on Rails
+* Ruby
+* Ruby on Rails
 ## フロントエンド
 HTML CSS
 ## データベース
+MySQL
 ## テスト
 RSpec
 ## エディタ
