@@ -17,7 +17,7 @@ okurimono
 
 # DEMO
 ## イメージ図
-![イメージ図](https://i.gyazo.com/701d83f979bb6473f391135a1dfe6407.png)
+![イメージ図](https://i.gyazo.com/8cfaff717fe17c90a3c95d931b17c6fa.png)
 ## ログイン画面
 ![イメージ図](https://i.gyazo.com/0bc0321b24ad8b027937f72cdaa37d12.png)
 ## ユーザー登録画面
