@@ -4,10 +4,10 @@
 </div>
 <div class='heder-nav'>
   <ul class="nav-lists">
-    <li class='user-name'>user-name</li>
+    <li class='user-name'><%= current_user.nickname %></li>
     <li class='new-content'>新規作成</li>
-    <li class='logaut-btn'>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    <li class='logout-btn'>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log-out" %>
     </li>
   </ul>
 </div>

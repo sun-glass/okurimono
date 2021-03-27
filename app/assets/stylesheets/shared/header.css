@@ -30,7 +30,24 @@
   flex-direction: center;
 }
 
-li {
+.nav-lists li {
   list-style: none;
+  line-height: 50px;
 }
 
+.nav-lists a {
+  color: black;
+  text-decoration: none;
+}
+
+.logout-btn {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.log-out {
+  width: 100%;
+  height: 20px;
+}
