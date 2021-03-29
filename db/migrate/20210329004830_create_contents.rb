@@ -7,6 +7,7 @@ class CreateContents < ActiveRecord::Migration[6.0]
       t.date :date,             null: false
       t.integer :money
       t.integer :category_id,   null: false
+      t.references :user,       null:false,foreign_key:true
       t.timestamps
     end
   end
