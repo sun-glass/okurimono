@@ -1,13 +1,47 @@
 <%= render "shared/header" %>
 
 <div class="contents-new-main">
-<div class="form-wrap">
-  <%= form_with(model: @content, local: true) do |f| %>
-  
+  <div class="form-wrap">
     <div class='form-header'>
-      <h1 class='form-header-text'>投稿情報入力</h1>
+      <h1 class='contents-new-title'>投稿情報入力</h1>
     </div>
-
+    <%= form_with(model: @content, local: true) do |f| %>
+    <%#= render 'shared/error_messages', model: f.object %>
+    
+    <%# 投稿画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">投稿画像</div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"content-image" %>
+      </div>
+    </div>
+    <%# 投稿画像 %>
+    
+    <%# 投稿内容 %>
+    <div class="new-contents">
+      <div class="weight-bold-text">
+        送り主
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"contents-name", id:"contents-name", placeholder:"（必須 30文字まで)", maxlength:"30" %>
+      <div class="weight-bold-text">
+        タイトル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :title, class:"contents-title", id:"contents-title", placeholder:"（必須 40文字まで)", maxlength:"40" %>
+      <div class="contens-explain">
+        <div class="weight-bold-text">
+        メモ欄
+        <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :text, class:"contents-text", id:"contents-text", placeholder:"商品の説明（必須 1,000文字まで）", rows:"7", maxlength:"1000" %>
+      </div>
+    </div>  
+    <%# 投稿内容 %>
+    
     <%# 投稿日付け %>
     <div class="form-group">
       <div class='form-text-wrap'>
@@ -17,7 +51,7 @@
       <div class="input-date-wrap">
         <%= raw sprintf(
               f.date_select(
-              :birth_date,
+              :date,
               use_month_numbers: true,
               pormit:"--",
               start_year: (Time.now.year),
@@ -27,7 +61,31 @@
       </div>
     </div>
     <%# 投稿日付け %>
-  <% end %>
+
+    <%# 金額 %>
+    <div class="contents-money">
+      <div class="money-wrap">
+        <span class="money-icon">¥</span>
+      </div>
+      <%= f.text_field :money, class:"money-input", id:"contents-money", placeholder:"例）3000" %>
+      <span class="money-icon">円</span>
+    </div>
+    <%# 金額 %>
+
+    <%# カテゴリー %>
+    <div class="contents-category">
+      <div class="weight-bold-text">
+        カテゴリー
+        <span class="indispensable">必須</span>
+      </div>
+      <%#= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"contents-category"}) %>
+    </div>
+    <%# カテゴリー %>
+
+    <%# 投稿/戻るボタン %>
+    
+    <%# 投稿/戻るボタン %>
+    <% end %>
   </div>
 </div>
 
