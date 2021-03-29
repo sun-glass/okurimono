@@ -1,16 +1,17 @@
 <%= render "shared/header" %>
 
 <div class="contents-new-main">
-  <div class="form-wrap">
-    <div class='form-header'>
-      <h1 class='contents-new-title'>投稿情報入力</h1>
-    </div>
+  <div class="contents-new-form">
     <%= form_with(model: @content, local: true) do |f| %>
     <%#= render 'shared/error_messages', model: f.object %>
-    
+    <div class='form-header'>
+      <h1 class='form-header-text'>投稿情報入力</h1>
+    </div>
     <%# 投稿画像 %>
     <div class="img-upload">
-      <div class="weight-bold-text">投稿画像</div>
+      <div class="weight-bold-text">
+        投稿画像
+      </div>
       <div class="click-upload">
         <p>
           クリックしてファイルをアップロード
@@ -26,12 +27,12 @@
         送り主
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :name, class:"contents-name", id:"contents-name", placeholder:"（必須 30文字まで)", maxlength:"30" %>
+      <%= f.text_area :name, class:"contents-text", id:"contents-name", placeholder:"（必須 30文字まで)", maxlength:"30" %>
       <div class="weight-bold-text">
         タイトル
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :title, class:"contents-title", id:"contents-title", placeholder:"（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :title, class:"contents-text", id:"contents-title", placeholder:"（必須 40文字まで)", maxlength:"40" %>
       <div class="contens-explain">
         <div class="weight-bold-text">
         メモ欄
@@ -43,9 +44,9 @@
     <%# 投稿内容 %>
     
     <%# 投稿日付け %>
-    <div class="form-group">
-      <div class='form-text-wrap'>
-        <label class="form-text">日付け</label>
+    <div class="data-group">
+      <div class="weight-bold-text">
+        日付け
         <span class="indispensable">必須</span>
       </div>
       <div class="input-date-wrap">
@@ -64,11 +65,9 @@
 
     <%# 金額 %>
     <div class="contents-money">
-      <div class="money-wrap">
-        <span class="money-icon">¥</span>
-      </div>
+        <span class="weight-bold-text">¥</span>
       <%= f.text_field :money, class:"money-input", id:"contents-money", placeholder:"例）3000" %>
-      <span class="money-icon">円</span>
+      <span class="weight-bold-text">円</span>
     </div>
     <%# 金額 %>
 
@@ -83,7 +82,10 @@
     <%# カテゴリー %>
 
     <%# 投稿/戻るボタン %>
-    
+    <div class="post-btn-contents">
+      <%= f.submit "投稿する", class:"post-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
     <%# 投稿/戻るボタン %>
     <% end %>
   </div>

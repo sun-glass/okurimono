@@ -1,30 +1,120 @@
 .contents-new-main {
   width: 100%;
-  min-width: 800px;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.contents-new-form {
+  min-width: 450px;
+  width: 70%;
   height: 100%;
   background-color: whitesmoke;
   display: flex;
   justify-content: center;
 }
 
-.form-wrap {
-  width: 50%;
-  background-color: white;
-  padding-bottom: 70px;
+/* 投稿画像部 */
+.img-upload {
+  display: flex;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 0;
 }
 
-.cntents-new-form {
-  width: 50%;
-  padding-bottom: 70px;
-  background-color: whitesmoke;
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
 }
 
+.click-upload>p {
+  margin-bottom: 15px;
+}
+
+/* 投稿内容部 */
+.new-contents {
+  padding: 2vh 0;
+}
+
+.contents-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.contents-explain {
+  margin-top: 2vh;
+}
+
+/* 日付設定部 */
 .input-date-wrap {
   display: flex;
   justify-content: end;
 }
 
+.input-date-wrap select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  cursor: pointer;
+}
+
 .input-date-wrap p {
   margin: 0 5px;
   font-weight: bolder
+}
+
+/*金額部*/
+.contents-money {
+  width: 300px;
+  padding: 10px;
+}
+
+.money-input {
+  height: 30px;
+  text-align: right;
+  padding-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/*投稿/戻るボタン*/
+.post-btn-contents {
+  width: 100%;
+  height: 180px;
+  text-align: center;
+}
+
+.post-btn {
+  width: 100%;
+  height: 50px;
+  background: mediumturquoise;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 15px 35%;
+  text-decoration: none;
+}
+
+/* 共通 */
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
 }
