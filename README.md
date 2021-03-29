@@ -29,7 +29,7 @@ okurimono
 ## バックエンド
 * Ruby
 * Ruby on Rails
-* 
+
 ## フロントエンド
 HTML CSS
 
@@ -65,7 +65,7 @@ has_many :contents
 | name        | string     | null:false                  |
 | title       | string     | null:false                  |
 | text        | string     |                             |
-| date        | integer    | null:false                  |
+| date        | date       | null:false                  |
 | money       | integer    |                             |
 | category_id | integer    | null:false                  |
 | user        | references | null:false,foreign_key:true |
