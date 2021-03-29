@@ -62,13 +62,11 @@ has_many :contents
 ## contentsテーブル
 | Colum       | Type       | Options                     |
 |-------------|------------|-----------------------------|
-| year        | integer    | null:false                  |
-| month       | integer    | null:false                  |
-| day         | integer    | null:false                  |
 | name        | string     | null:false                  |
 | title       | string     | null:false                  |
-| money       | integer    | null:false                  |
-| text        | string     | null:false                  |
+| text        | string     |                             |
+| date        | integer    | null:false                  |
+| money       | integer    |                             |
 | category_id | integer    | null:false                  |
 | user        | references | null:false,foreign_key:true |
 ### Association
