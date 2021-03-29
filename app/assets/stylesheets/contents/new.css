@@ -1,0 +1,26 @@
+.contents-new-main {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.cntents-new-form {
+  width: 50%;
+  padding-bottom: 70px;
+  background-color: whitesmoke;
+}
+
+.input-date-wrap {
+  display: flex;
+  justify-content: end;
+}
+
+.input-date-wrap p {
+  margin: 0 5px;
+  font-weight: bolder
+}

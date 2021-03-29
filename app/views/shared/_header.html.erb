@@ -5,10 +5,10 @@
 <div class='heder-nav'>
   <ul class="nav-lists">
     <li class='user-name'>
-      <%= link_to current_user.nickname, "#" %>
+      <%= link_to current_user.nickname, root_path %>
     </li>
     <li class='new-content'>
-      <%= link_to "新規投稿", "#" %>
+      <%= link_to "新規投稿", new_content_path %>
     </li>
     <li class='logout-btn'>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log-out" %>
