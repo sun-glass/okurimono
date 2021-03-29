@@ -4,9 +4,7 @@ class CreateContents < ActiveRecord::Migration[6.0]
       t.string :name,           null: false
       t.string :title,          null: false
       t.string :text,           null: false
-      t.integer :year,          null: false
-      t.integer :month,         null: false
-      t.integer :day,           null: false
+      t.date :date,             null: false
       t.integer :money
       t.integer :category_id,   null: false
       t.timestamps

@@ -16,9 +16,7 @@ ActiveRecord::Schema.define(version: 2021_03_29_004830) do
     t.string "name", null: false
     t.string "title", null: false
     t.string "text", null: false
-    t.integer "year", null: false
-    t.integer "month", null: false
-    t.integer "day", null: false
+    t.date "date", null: false
     t.integer "money"
     t.integer "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
