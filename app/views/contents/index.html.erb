@@ -4,9 +4,25 @@
 <div class='main'>
 
     <ul class="content-lists">
-      
-      
+    <% @contents.each do |content| %>
+      <li class='list'>
+        <%= image_tag content.image, class: "content-img" if content.image.attached? %>
+        <div class='content-info-left'>
+          <h1 class='friend-name'><%= content.name %></h1>
+          <h2 class='content-title'><%= content.title %></h2>
+          <h3 class='content-text'><%= content.text %></h3>
+        </div>
+        
+        <div class='content-info-light'>
+          <div class='content-day'><%= content.date %></div>
+          <div class='content-money'>¥<%= content.money %>円</div>
+          <div class='content-category'><%= content.category.name %></div>
+        </div>
+      </li>
+    <% end %>
+
       <%# 投稿がない場合のダミー %>
+    <% if @contents.length == 0 %>
       <li class='list'>
         <img src="https://www.shoshinsha-design.com/wp-content/uploads/2020/05/noimage-760x460.png" class='content-img'>
         <div class='content-info-left'>
@@ -18,9 +34,10 @@
         <div class='content-info-light'>
           <div class='content-day'>2021/-/-</div>
           <div class='content-money'>¥ - 円</div>
-          <div class='content-category'>カテゴリー<%#= @item.category.name %></div>
+          <div class='content-category'>カテゴリー</div>
         </div>
       </li>
+    <% end %>
       <%# 投稿がない場合のダミー %>
     </ul>
 

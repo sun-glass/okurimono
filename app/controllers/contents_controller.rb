@@ -21,7 +21,7 @@ class ContentsController < ApplicationController
   private
 
   def content_params
-    params.require(:content).permit(:name, :title, :text, :date, :money, :category_id).merge(user_id: current_user.id)
+    params.require(:content).permit(:image, :name, :title, :text, :date, :money, :category_id).merge(user_id: current_user.id)
   end
   
 end
