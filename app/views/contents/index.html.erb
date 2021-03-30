@@ -6,17 +6,25 @@
     <ul class="content-lists">
     <% @contents.each do |content| %>
       <li class='list'>
+      <% if content.image != nil %>
         <%= image_tag content.image, class: "content-img" if content.image.attached? %>
+      <% else %>
+      <img src="https://www.shoshinsha-design.com/wp-content/uploads/2020/05/noimage-760x460.png" class='content-img'>
+      <% end %>
         <div class='content-info-left'>
           <h1 class='friend-name'><%= content.name %></h1>
           <h2 class='content-title'><%= content.title %></h2>
+          <div class="text-title">MEMO</div>
           <h3 class='content-text'><%= content.text %></h3>
         </div>
-        
         <div class='content-info-light'>
           <div class='content-day'><%= content.date %></div>
+        <% if content.money != nil %>
           <div class='content-money'>¥<%= content.money %>円</div>
-          <div class='content-category'><%= content.category.name %></div>
+        <% else %>
+          <div class='content-money'>¥ - 円</div>
+        <% end %>
+          <div class='content-category'>カテゴリー：<%= content.category.name %></div>
         </div>
       </li>
     <% end %>
@@ -30,7 +38,6 @@
           <h2 class='content-title'>親戚からお年玉</h2>
           <h3 class='content-text'>去年より多く貰えて嬉しかった</h3>
         </div>
-        
         <div class='content-info-light'>
           <div class='content-day'>2021/-/-</div>
           <div class='content-money'>¥ - 円</div>

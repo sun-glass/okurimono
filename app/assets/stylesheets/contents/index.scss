@@ -25,6 +25,7 @@ ul,li {
   align-items: center;
 }
 
+/* 投稿内容 */
 .content-lists {
   height: 100%;
   width: 70vw;
@@ -36,7 +37,7 @@ ul,li {
 }
 
 .content-lists>.list {
-  border: 1px solid blue;
+  border: 1px solid #888;
   width: 100%;
   height: 250px;
   border-radius: 4px;
@@ -52,7 +53,7 @@ ul,li {
 
 .content-info-left {
   height: 100%;
-  width: 50%;
+  width: 40%;
   padding: 1vw;
 }
 
@@ -79,15 +80,22 @@ ul,li {
   width: 70%;
   margin-left: 20px;
   padding: 5px 15px 5px;
-  font-size: 1vw;
-  line-height: 50px;
+  font-size: 0.9vw;
+  line-height: 30px;
   color: #888;
+  border: 1px solid #888;
+  border-radius: 4px;
   overflow: auto;
+}
+
+.text-title {
+  margin-left: 25px;
+  color: #888;
 }
 
 .content-info-light {
   height: 100%;
-  width: 20%;
+  width: 30%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -96,9 +104,10 @@ ul,li {
 
 .content-day {
   height: auto;
-  width: 50%;
-  font-size: 1vw;
+  width: 40%;
+  font-size: 1.2vw;
   margin-left: 40%;
+  border-bottom: 1px solid black;
 }
 
 .content-money {
@@ -110,8 +119,9 @@ ul,li {
 
 .content-category {
   height: auto;
-  width: 50%;
-  font-size: 1vw;
+  width: 60%;
+  color: #888;
+  font-size: 1.2vw;
   margin-left: 40%;
 }
 
