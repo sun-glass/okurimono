@@ -88,6 +88,14 @@
   border: 1px solid #ccc;
 }
 
+/*カテゴリー選択*/
+.select-box {
+  height: 30px;
+  margin-bottom: 5vh;
+  border-radius: 4px;
+  padding-left: 15px;
+}
+
 /*投稿/戻るボタン*/
 .post-btn-contents {
   width: 100%;

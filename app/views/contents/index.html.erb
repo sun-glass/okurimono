@@ -6,11 +6,11 @@
     <ul class="content-lists">
     <% @contents.each do |content| %>
       <li class='list'>
-      <% if content.image != nil %>
+      <%# if content.money != nil %>
         <%= image_tag content.image, class: "content-img" if content.image.attached? %>
-      <% else %>
-      <img src="https://www.shoshinsha-design.com/wp-content/uploads/2020/05/noimage-760x460.png" class='content-img'>
-      <% end %>
+      <%# else %>
+      <%# 画像無しの場合代替え画像表示予定 %>
+      <%# end %>
         <div class='content-info-left'>
           <h1 class='friend-name'><%= content.name %></h1>
           <h2 class='content-title'><%= content.title %></h2>
