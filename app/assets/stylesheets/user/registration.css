@@ -69,7 +69,7 @@
 }
 
 .input-birth-wrap {
-  display: flex;
+  flex-wrap: hidden;
 }
 
 .input-birth-wrap select {

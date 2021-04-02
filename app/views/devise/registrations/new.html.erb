@@ -7,15 +7,15 @@
       会員情報入力
     </h1>
   </div>
-
-  <%= render "devise/shared/error_messages", resource: resource %>
+<%# エラーメッセージ%>
+  <%= render "shared/error_messages", model: f.object %>
 
   <div class="form-group">
     <div class="form-text-wrap">
       <label class="form-text">ニックネーム</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_field :nickname, class:"input-default", id:"nickname", placeholder:"例) okurimono太郎", maxlength:"15" %>
+    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) okurimono太郎", maxlength:"15" %>
   </div>
 
   <div class="form-group">
