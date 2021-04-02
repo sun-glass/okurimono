@@ -1,11 +1,17 @@
 class Content < ApplicationRecord
-  validates :category_id, numericality: { other_than: 1 }
+  validates :category_id, presence: true, numericality: { other_than: 1 }
   validates :text, presence: true, unless: :was_attached?
+  
+  with_options presence: true do
+    validates :name
+    validates :title
+    validates :date
+  end
+
 
   def was_attached?
     self.image.attached?
   end
-
 
   belongs_to :user
   has_one_attached :image
