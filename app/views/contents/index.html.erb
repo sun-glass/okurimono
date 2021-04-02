@@ -6,7 +6,7 @@
     <ul class="content-lists">
     <% @contents.each do |content| %>
       <li class='list'>
-      <%# if content.money != nil %>
+      <%# if content.image = nil %>
         <%= image_tag content.image, class: "content-img" if content.image.attached? %>
       <%# else %>
       <%# 画像無しの場合代替え画像表示予定 %>

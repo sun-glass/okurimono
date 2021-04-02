@@ -33,7 +33,7 @@ ul,li {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-
+  overflow: auto;
 }
 
 .content-lists>.list {
@@ -73,6 +73,7 @@ ul,li {
   padding: 10px 15px 10px;
   font-size: 1.5vw;
   line-height: 50px;
+  overflow: auto;
 }
 
 .content-text {
@@ -85,7 +86,7 @@ ul,li {
   color: #888;
   border: 1px solid #888;
   border-radius: 4px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .text-title {
