@@ -1,6 +1,7 @@
 class ContentsController < ApplicationController
   before_action :authenticate_user!
-  
+  before_action :set_item, only: [:edit, :show, :destroy]
+
   def index
     @contents = Content.all.order("created_at DESC")
   end
@@ -19,7 +20,18 @@ class ContentsController < ApplicationController
   end
 
   def show
-    @content = Content.find(params[:id])
+  end
+
+  def edit
+  end
+
+
+  def destroy
+    if @content.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   private
@@ -28,4 +40,8 @@ class ContentsController < ApplicationController
     params.require(:content).permit(:image, :name, :title, :text, :date, :money, :category_id).merge(user_id: current_user.id)
   end
   
+  def set_item
+    @content = Content.find(params[:id])
+  end
+
 end
