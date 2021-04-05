@@ -1,0 +1,95 @@
+<%= render "shared/header" %>
+
+<div class="contents-new-main">
+  <div class="contents-new-form">
+    <%= form_with(model: @content, local: true) do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    
+    <div class='form-header'>
+      <h1 class='form-header-text'>投稿情報入力</h1>
+    </div>
+    <%# 投稿画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        投稿画像
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"content-image" %>
+      </div>
+    </div>
+    <%# 投稿画像 %>
+    
+    <%# 投稿内容 %>
+    <div class="new-contents">
+      <div class="weight-bold-text">
+        送り主
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"contents-text", id:"contents-name", placeholder:"（必須 30文字まで)", maxlength:"30" %>
+      <div class="weight-bold-text">
+        タイトル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :title, class:"contents-text", id:"contents-title", placeholder:"（必須 40文字まで)", maxlength:"40" %>
+      <div class="contens-explain">
+        <div class="weight-bold-text">
+        メモ欄
+        <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :text, class:"contents-text", id:"contents-text", placeholder:"コメント・メモ（必須 1,000文字まで）", rows:"7", maxlength:"1000" %>
+      </div>
+    </div>  
+    <%# 投稿内容 %>
+    
+    <%# 投稿日付け %>
+    <div class="data-group">
+      <div class="weight-bold-text">
+        日付け
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="input-date-wrap">
+        <%= raw sprintf(
+              f.date_select(
+              :date,
+              use_month_numbers: true,
+              pormit:"--",
+              start_year: (Time.now.year),
+              end_year: 1900,
+              date_separator:'%s'),
+              "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      </div>
+    </div>
+    <%# 投稿日付け %>
+
+    <%# 金額 %>
+    <div class="contents-money">
+        <span class="weight-bold-text">¥</span>
+      <%= f.text_field :money, class:"money-input", id:"contents-money", placeholder:"例）3000" %>
+      <span class="weight-bold-text">円</span>
+    </div>
+    <%# 金額 %>
+
+    <%# カテゴリー %>
+    <div class="contents-category">
+      <div class="weight-bold-text">
+        カテゴリー
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"contents-category"}) %>
+    </div>
+    <%# カテゴリー %>
+
+    <%# 投稿/戻るボタン %>
+    <div class="post-btn-contents">
+      <%= f.submit "投稿する", class:"post-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# 投稿/戻るボタン %>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
