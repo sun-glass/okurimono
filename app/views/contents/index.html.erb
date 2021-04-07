@@ -5,6 +5,7 @@
 
     <ul class="content-lists">
     <% @contents.each do |content| %>
+    <% if current_user.id == content.user_id %>
       <li class='list'>
           <%# if content.image = nil %>
         <%= image_tag content.image, class: "content-img" if content.image.attached? %>
@@ -29,6 +30,7 @@
           <div class='content-category'>カテゴリー：<%= content.category.name %></div>
         </div>
       </li>
+      <% end %>
     <% end %>
 
       <%# 投稿がない場合のダミー %>

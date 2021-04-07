@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_content, only: [:show, :edit, :update, :destroy]
 
   def index
     @contents = Content.all.order("created_at DESC")
@@ -47,7 +47,7 @@ class ContentsController < ApplicationController
     params.require(:content).permit(:image, :name, :title, :text, :date, :money, :category_id).merge(user_id: current_user.id)
   end
   
-  def set_item
+  def set_content
     @content = Content.find(params[:id])
   end
 
