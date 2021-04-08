@@ -1,8 +1,8 @@
 <%= render "shared/header" %>
 
+<div class="show-main">
   <%# 投稿詳細部 %>
-<div class="content-show-main">
-
+<div class="content-show">
   <div class='show-list'>
   <%# if content.image = nil %>
     <%= image_tag @content.image, class: "content-img" if @content.image.attached? %>
@@ -15,17 +15,16 @@
       <div class="text-title">MEMO</div>
       <h3 class='content-text'><%= @content.text %></h3>
     </div>
-    <div class='content-info-light'>
-      <div class='content-day'><%= @content.date %></div>
+    <div class='show-content-light'>
+      <div class='show-content-day'><%= @content.date %></div>
     <% if @content.money != nil %>
-      <div class='content-money'>¥<%= @content.money %>円</div>
+      <div class='show-content-money'>¥<%= @content.money %>円</div>
     <% else %>
-      <div class='content-money'>¥ - 円</div>
+      <div class='show-content-money'>¥ - 円</div>
     <% end %>
-      <div class='content-category'>カテゴリー：<%= @content.category.name %></div>
+      <div class='show-content-category'>カテゴリー：<%= @content.category.name %></div>
     </div>
   </div>
-
 </div>
   <%# 投稿詳細部 %>
 
@@ -34,7 +33,10 @@
     <%= link_to "編集", edit_content_path, method: :get, class:"edit-btn" %>
     <%= link_to "削除", content_path, method: :delete, class:"delete-btn" %>
   </div>
+  <div class="back-btn-wrap">
+    <%= link_to 'もどる', root_path, class:"show-back-btn" %>
+  </div>
   <%# 編集・削除ボタン %>
-
+</div>
 
 <%= render "shared/footer" %>
