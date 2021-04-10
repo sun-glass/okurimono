@@ -15,6 +15,7 @@
 .show-list {
   height: 100%;
   width: 100%;
+  padding: 60px 0;
   display: flex;
   align-items: center;
 }
@@ -38,6 +39,48 @@ padding: 1vw;
 
 .show-content-money {
   margin-bottom: 25px;
+}
+
+.show-content-info-left {
+  width: 70%;
+  height: 100%;
+}
+
+.show-friend-name {
+  height: 66px;
+  width: 70%;
+  margin-left: 20px;
+  padding: 10px 15px 10px;
+  font-size: 2.5vw;
+  line-height: 50px;
+}
+
+.show-content-title {
+  height: 66px;
+  width: 70%;
+  margin-left: 20px;
+  padding: 10px 15px 10px;
+  font-size: 1.5vw;
+  line-height: 50px;
+  overflow: auto;
+}
+
+.show-text-title {
+  margin-left: 25px;
+  color: #888;
+}
+
+.show-content-text {
+  height: 100px;
+  width: 70%;
+  margin-left: 20px;
+  padding: 5px 15px 5px;
+  font-size: 0.9vw;
+  line-height: 30px;
+  color: #888;
+  border: 1px solid #888;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 /* 編集・削除・戻るボタン */
@@ -75,6 +118,7 @@ padding: 1vw;
 .back-btn-wrap {
   width: 100%;
   height: 80px;
+  padding-bottom: 15%;
   background-color: whitesmoke;
   display: flex;
   justify-content: center;

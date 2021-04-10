@@ -9,11 +9,11 @@
   <%# else %>
   <%# 画像無しの場合代替え画像表示予定 %>
   <%# end %>
-    <div class='content-info-left'>
-      <h1 class='friend-name'><%= @content.name %></h1>
-      <h2 class='content-title'><%= @content.title %></h2>
-      <div class="text-title">MEMO</div>
-      <h3 class='content-text'><%= @content.text %></h3>
+    <div class='show-content-info-left'>
+      <h1 class='show-friend-name'><%= @content.name %></h1>
+      <h2 class='show-content-title'><%= @content.title %></h2>
+      <div class="show-text-title">MEMO</div>
+      <h3 class='show-content-text'><%= @content.text %></h3>
     </div>
     <div class='show-content-light'>
       <div class='show-content-day'><%= @content.date %></div>
