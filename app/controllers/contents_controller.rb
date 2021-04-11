@@ -1,6 +1,8 @@
 class ContentsController < ApplicationController
   before_action :authenticate_user!
+  before_action :move_to_user, except: [:index, :new, :create]
   before_action :set_content, only: [:show, :edit, :update, :destroy]
+
 
   def index
     @contents = Content.all.order('created_at DESC')
@@ -50,4 +52,10 @@ class ContentsController < ApplicationController
   def set_content
     @content = Content.find(params[:id])
   end
+
+  def move_to_user
+    @content = Content.find(params[:id])
+    redirect_to action: :index if current_user.id != @content.user_id
+  end
+
 end
