@@ -7,11 +7,7 @@
     <% @contents.each do |content| %>
     <% if current_user.id == content.user_id %>
       <li class='list'>
-          <%# if content.image = nil %>
         <%= image_tag content.image, class: "content-img" if content.image.attached? %>
-          <%# else %>
-          <%# 画像無しの場合代替え画像表示予定 %>
-          <%# end %>
         <div class='content-info-left'>
         <%= link_to content_path(content.id) do %>
           <h1 class='friend-name'><%= content.name %></h1>
