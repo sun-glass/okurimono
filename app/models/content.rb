@@ -8,6 +8,8 @@ class Content < ApplicationRecord
     validates :date
   end
 
+  validates :money, numericality: { only_integer: true }
+
   def was_attached?
     image.attached?
   end
